@@ -5,6 +5,7 @@ import type { Homepage, SiteSettings } from "@/lib/types";
 import { LandingCards } from "@/components/LandingCards";
 import { LeafBranch, PetalScatter } from "@/components/FloralDecor";
 import { ShellMark } from "@/components/ShellMark";
+import { GulbaanLogo } from "@/components/GulbaanLogo";
 
 export const revalidate = 60;
 
@@ -59,6 +60,9 @@ export default async function LandingPage() {
 
       {/* Hero copy */}
       <header className="mb-10 max-w-2xl text-center">
+        <div className="mb-6 flex justify-center">
+          <GulbaanLogo className="h-16 sm:h-20" />
+        </div>
         <div className="mb-5 flex justify-center">
           <ShellMark prefix="Available at" label="Shell Select" />
         </div>

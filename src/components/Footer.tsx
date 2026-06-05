@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
 import { Sprig } from "@/components/FloralDecor";
+import { GulbaanLogo } from "@/components/GulbaanLogo";
 
 export function Footer({ settings }: { settings: SiteSettings }) {
   return (
@@ -10,7 +11,11 @@ export function Footer({ settings }: { settings: SiteSettings }) {
       </div>
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <p className="display text-2xl text-bark">Gulbaan × Shell Select</p>
+          <div className="flex items-center gap-3">
+            <GulbaanLogo className="h-9" />
+            <span className="text-clay">×</span>
+            <span className="display text-xl text-bark">Shell Select</span>
+          </div>
           <p className="mt-3 max-w-md text-pretty text-sm text-bark/65">
             {settings.footerNote ||
               "Gulbaan is a visual catalogue. To purchase, please visit a participating Shell Select store."}

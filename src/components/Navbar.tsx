@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
-import { ShellScallop } from "@/components/ShellMark";
+import { GulbaanLogo } from "@/components/GulbaanLogo";
 
 export function Navbar({
   settings,
@@ -12,25 +12,11 @@ export function Navbar({
   return (
     <header className="sticky top-0 z-40 border-b border-bark/5 bg-cream/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 sm:py-4">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-bloom/10 text-bloom transition-colors group-hover:bg-bloom/20">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-              <circle cx="12" cy="12" r="3" />
-              <circle cx="12" cy="5" r="2.4" opacity="0.8" />
-              <circle cx="12" cy="19" r="2.4" opacity="0.8" />
-              <circle cx="5" cy="12" r="2.4" opacity="0.8" />
-              <circle cx="19" cy="12" r="2.4" opacity="0.8" />
-            </svg>
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="flex items-center gap-1.5">
-              <span className="display text-xl text-bark">Gulbaan</span>
-              <span className="text-clay">×</span>
-              <ShellScallop className="h-4 w-4" />
-            </span>
-            <span className="text-[0.6rem] uppercase tracking-[0.2em] text-clay">
-              Shell Select Store
-            </span>
+        <Link href="/" className="group flex items-center gap-3" aria-label="Gulbaan — Shell Select Store">
+          <GulbaanLogo className="h-8 transition-transform duration-300 group-hover:scale-[1.03] sm:h-9" />
+          <span className="hidden h-7 w-px bg-bark/15 sm:block" />
+          <span className="hidden text-[0.62rem] font-medium uppercase tracking-[0.22em] text-clay sm:block">
+            Shell Select Store
           </span>
         </Link>
 

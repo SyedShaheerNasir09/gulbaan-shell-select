@@ -1,13 +1,9 @@
-import { ShellScallop } from "@/components/ShellMark";
 import type { StoreLocation } from "@/lib/types";
 
 function StoreCard({ s }: { s: StoreLocation }) {
   return (
     <div className="flex h-full flex-col rounded-4xl border border-white/60 bg-ivory/80 p-6 shadow-soft">
-      <div className="mb-1 flex items-center gap-2">
-        <ShellScallop className="h-5 w-5" />
-        <p className="display text-xl text-bark">{s.name}</p>
-      </div>
+      <p className="display text-xl text-bark">{s.name}</p>
       {s.area && <p className="text-sm text-clay">{s.area}</p>}
       {s.address && <p className="mt-2 text-sm text-bark/70">{s.address}</p>}
       {!s.address && (
@@ -41,16 +37,13 @@ export function StoreLocator({
 
   return (
     <section id="stores" className="mx-auto max-w-7xl px-5 sm:px-8">
-      <div className="mb-8 flex items-center gap-3">
-        <ShellScallop className="h-7 w-7" />
-        <div>
-          <h2 className="display text-3xl text-bark">{title}</h2>
-          <p className="text-sm text-clay">
-            {single
-              ? "Gulbaan blooms are available at our Shell Select store."
-              : "Gulbaan blooms are available at these Shell Select stores."}
-          </p>
-        </div>
+      <div className="mb-8">
+        <h2 className="display text-3xl text-bark">{title}</h2>
+        <p className="mt-1 text-sm text-clay">
+          {single
+            ? "Gulbaan blooms are available at our Shell Select store."
+            : "Gulbaan blooms are available at these Shell Select stores."}
+        </p>
       </div>
 
       {single ? (

@@ -1,4 +1,3 @@
-import { ShellScallop } from "@/components/ShellMark";
 import type { StoreLocation } from "@/lib/types";
 
 export function AvailabilityList({
@@ -12,12 +11,9 @@ export function AvailabilityList({
 
   return (
     <div className="mt-8 rounded-4xl border border-bark/10 bg-ivory/70 p-6">
-      <div className="mb-3 flex items-center gap-2">
-        <ShellScallop className="h-5 w-5" />
-        <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-bark">
-          Available at Shell Select
-        </h2>
-      </div>
+      <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-bark">
+        Available at Shell Select
+      </h2>
 
       {store ? (
         <p className="flex items-start gap-2 text-sm text-bark/80">

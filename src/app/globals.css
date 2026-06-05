@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #faf5ef;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    background-image: radial-gradient(
+        1100px 520px at 12% -8%,
+        rgba(243, 217, 214, 0.55),
+        transparent 60%
+      ),
+      radial-gradient(
+        900px 480px at 100% 0%,
+        rgba(157, 176, 140, 0.18),
+        transparent 55%
+      );
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(180, 91, 91, 0.18);
+    color: #2e2a26;
+  }
+
+  /* Soft floral scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f3eadf;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d8c3b3;
+    border-radius: 999px;
+    border: 2px solid #f3eadf;
+  }
+}
+
+@layer components {
+  /* Editorial heading helper */
+  .display {
+    @apply font-serif tracking-tight text-bark;
+    font-feature-settings: "liga" 1, "dlig" 1;
+  }
+
+  .handwritten {
+    @apply font-hand text-bloom;
+  }
+
+  .eyebrow {
+    @apply font-sans text-xs uppercase tracking-[0.28em] text-clay;
+  }
+
+  /* Frosted, rounded card surface */
+  .surface {
+    @apply rounded-4xl border border-white/60 bg-ivory/80 shadow-soft backdrop-blur-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bloom px-7 py-3
+      text-sm font-medium tracking-wide text-ivory shadow-petal transition-all
+      duration-300 ease-petal hover:-translate-y-0.5 hover:bg-rose
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-bloom/40;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-bark/15
+      bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-bark transition-all
+      duration-300 ease-petal hover:border-bloom/40 hover:bg-white/50;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-bark/10 bg-white/60 px-3 py-1
+      text-xs font-medium text-clay;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Organic, asymmetric blob mask for hero imagery */
+  .blob-mask {
+    border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  }
+
+  .paper-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+}

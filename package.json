@@ -1,0 +1,46 @@
+{
+  "name": "gulbaan-shell-select",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gulbaan Shell Select Store — a premium digital flower catalogue (no checkout, no cart).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "import": "tsx scripts/import-catalog.ts",
+    "import:dry": "cross-env DRY_RUN=1 tsx scripts/import-catalog.ts",
+    "import:force": "cross-env FORCE=1 tsx scripts/import-catalog.ts",
+    "migrate:single-store": "tsx scripts/migrate-single-store.ts"
+  },
+  "dependencies": {
+    "@sanity/client": "^6.27.2",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.99.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.18.2",
+    "next": "15.1.6",
+    "next-sanity": "^9.8.62",
+    "qrcode": "^1.5.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sanity": "^3.99.0",
+    "styled-components": "^6.1.14",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.20.0",
+    "eslint-config-next": "15.1.6",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

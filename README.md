@@ -1,4 +1,4 @@
-# Gulbaan · Shell Select Store 🌸
+# Gulbaan · Shell Select Store 
 
 A **premium digital flower catalogue** for Gulbaan products available at the **Shell
 Select store**. This is **not** an e-commerce site — there is **no cart, no checkout,
